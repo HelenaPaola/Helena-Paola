@@ -1,0 +1,237 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPkqAbkEjwSyuV4odFs0ayj",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/HelenaPaola/Helena-Paola/blob/main/Mi-github-ev2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "C-0T-2nj1FHE",
+        "outputId": "a1459a21-f471-4880-b012-d800a847f438"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nombre Pedro\n",
+            "Nombre Carla\n"
+          ]
+        }
+      ],
+      "source": [
+        "class Persona:\n",
+        "\n",
+        "    def inicializar(self,nom):\n",
+        "        self.nombre=nom\n",
+        "\n",
+        "    def imprimir(self):\n",
+        "        print(\"Nombre\",self.nombre)\n",
+        "\n",
+        "\n",
+        "# bloque principal\n",
+        "\n",
+        "persona1=Persona()\n",
+        "persona1.inicializar(\"Pedro\")\n",
+        "persona1.imprimir()\n",
+        "\n",
+        "persona2=Persona()\n",
+        "persona2.inicializar(\"Carla\")\n",
+        "persona2.imprimir()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Alumno:\n",
+        "\n",
+        "    def inicializar(self,nombre,nota):\n",
+        "        self.nombre=nombre\n",
+        "        self.nota=nota\n",
+        "\n",
+        "    def imprimir(self):\n",
+        "        print(\"Nombre:\",self.nombre)\n",
+        "        print(\"Nota:\",self.nota)\n",
+        "\n",
+        "    def mostrar_estado(self):\n",
+        "        if self.nota>=4:\n",
+        "            print(\"Regular\")\n",
+        "        else:\n",
+        "            print(\"Libre\")\n",
+        "\n",
+        "\n",
+        "# bloque principal\n",
+        "\n",
+        "alumno1=Alumno()\n",
+        "alumno1.inicializar(\"diego\",2)\n",
+        "alumno1.imprimir()\n",
+        "alumno1.mostrar_estado()\n",
+        "\n",
+        "alumno2=Alumno()\n",
+        "alumno2.inicializar(\"ana\",10)\n",
+        "alumno2.imprimir()\n",
+        "alumno2.mostrar_estado()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YUkyt8Jg5BYt",
+        "outputId": "226cf388-80b0-49de-d08f-3d2c015c263c"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nombre: diego\n",
+            "Nota: 2\n",
+            "Libre\n",
+            "Nombre: ana\n",
+            "Nota: 10\n",
+            "Regular\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Persona:\n",
+        "    def inicializar(self, nombre, edad):\n",
+        "        self.nombre = nombre\n",
+        "        self.edad = edad\n",
+        "\n",
+        "    def imprimir(self):\n",
+        "        print(\"Nombre:\", self.nombre)\n",
+        "        print(\"Edad:\", self.edad)\n",
+        "\n",
+        "    def mayor_edad(self):\n",
+        "        if self.edad >= 18:\n",
+        "            print(\"Es mayor de edad\")\n",
+        "        else:\n",
+        "            print(\"No es mayor de edad\")\n",
+        "\n",
+        "# bloque principal\n",
+        "persona1 = Persona()\n",
+        "persona1.inicializar(\"Luis\", 23)\n",
+        "persona1.imprimir()\n",
+        "persona1.mayor_edad()\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QdDWQS4k8iEG",
+        "outputId": "fe8b1c37-d083-4abe-b158-b155b7790a7f"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nombre: Luis\n",
+            "Edad: 23\n",
+            "Es mayor de edad\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Triangulo:\n",
+        "\n",
+        "  def inicializar(self):\n",
+        "    self.lado1 = int(input(\"Ingrese primer lado:\"))\n",
+        "    self.lado2 = int(input(\"Ingrese segundo lado:\"))\n",
+        "    self.lado3 = int(input(\"Ingrese tercer lado:\"))\n",
+        "\n",
+        "  def imprimir(self):\n",
+        "    print(\"Lado1:\", self.lado1)\n",
+        "    print(\"Lado2:\", self.lado2)\n",
+        "    print(\"Lado3:\", self.lado3)\n",
+        "\n",
+        "  def lado_mayor(self):\n",
+        "    print(\"Lado mayor:\")\n",
+        "    if self.lado1 > self.lado2 and self.lado1 > self.lado3:\n",
+        "      print(self.lado1)\n",
+        "    elif self.lado2 > self.lado3:\n",
+        "      print(self.lado2)\n",
+        "    else:\n",
+        "      print(self.lado3)\n",
+        "\n",
+        "  def es_equilatero(self):\n",
+        "    if self.lado1 == self.lado2 and self.lado1 == self.lado3:\n",
+        "      print(\"El triángulo es equilátero\")\n",
+        "    else:\n",
+        "      print(\"El triángulo no es equilátero\")\n",
+        "\n",
+        "# Bloque principal\n",
+        "triangulo1 = Triangulo()\n",
+        "triangulo1.inicializar()\n",
+        "triangulo1.imprimir()\n",
+        "triangulo1.lado_mayor()\n",
+        "triangulo1.es_equilatero()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "b3RoNzSXBx8f",
+        "outputId": "90c0a0ea-4959-46df-f022-0c4574588879"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ingrese primer lado:3\n",
+            "Ingrese segundo lado:4\n",
+            "Ingrese tercer lado:3\n",
+            "Lado1: 3\n",
+            "Lado2: 4\n",
+            "Lado3: 3\n",
+            "Lado mayor:\n",
+            "4\n",
+            "El triángulo no es equilátero\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
